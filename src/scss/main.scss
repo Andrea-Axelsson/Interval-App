@@ -1,0 +1,154 @@
+@import 'config';
+@import 'loading';
+@import 'set-timer';
+@import 'timer';
+@import 'break';
+@import 'menu';
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between; /* Fördelar logga och eventuell annan innehåll jämnt */
+  align-items: center; /* Centrerar vertikalt */
+  position: relative; /* Möjliggör att interval-title centreras korrekt */
+  width: 100%; /* Se till att nav täcker hela bredden */
+}
+
+.container{
+  background: $primary-color;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    margin-bottom: 3px;
+  
+    &__part {
+      height: 30px;
+      background: #fff;
+  
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          width: 2px * pow(2, $i - 1); // Beräknar bredden: 2px, 4px, 8px, 12px
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    margin-bottom: 3px;
+    transform: rotate(90deg);
+  
+    &__part {
+      height: 30px;
+      background: $secondary-color;
+  
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          width: 2px * pow(2, $i - 1); // Beräknar bredden: 2px, 4px, 8px, 12px
+        }
+      }
+    }
+  }
+
+  .nav__logo {
+    display: flex;
+    justify-content: flex-start; /* Se till att loggan hålls till vänster */
+  }
+
+.h1{
+    color: $secondary-color;
+    font-size: 5rem;
+
+}
+
+.h2{
+    font-size: 1.875rem;
+    margin-top: 20px;
+
+}
+
+.light{
+  color: $secondary-color;
+  background-color: $primary-color;
+}
+
+.dark{
+    color: $primary-color;
+    background-color: $secondary-color;
+}
+
+.h5{
+    
+    color: $primary-color;
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.p{
+    color: $primary-color;
+    font-size: .875rem;
+    margin-top: .625rem;
+}
+
+.nav__title {
+  font-size: 1.25rem;
+  position: absolute; /* Gör det möjligt att centrera titeln */
+  left: 50%; /* Flyttar titeln till mitten */
+  transform: translateX(-50%); /* Justerar titeln så att den är helt centrerad */
+}
+
+.button{
+  font-weight: 700;
+  font-size: 1rem;
+  padding: .625rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1.25rem;
+}
+
+.light-button:hover{
+  background-color: #c9c9c9;
+}
+
+.dark-button:hover{
+  background-color: #222222;
+}
+
+.light-button{
+  color: #727272;
+  border: 1px solid #727272 ;
+  background-color: $primary-color;
+}
+
+.dark-button{
+  color: $primary-color;
+  border: 1px solid $primary-color ;
+  background-color: $secondary-color;
+}
+
+.menu{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}

@@ -1,0 +1,32 @@
+.break__container{
+    background: $secondary-color;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Sprid utrymmet mellan toppen och botten */
+    align-items: center;
+}
+
+.break-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    flex-grow: 1;
+}
+
+.fa-bell, .fa-pause{
+    color: #fff;
+    font-size: 80px;
+}
+
+.fa-bell{
+    transform-origin: top center;
+}
+
+.break-btn{
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,86 @@
+
+.setTimer__timer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.fa-solid{
+    font-size: 40px;
+}
+
+/* Dölj den ursprungliga radioknappen */
+.custom-radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .custom-radio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  label{
+    margin-bottom: 10px;
+
+  }
+
+  /* Skapa en fyrkantig ruta för radioknappen */
+  .custom-radio .checkmark {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: $primary-color;
+    border-radius: 2px;
+    border: 2px solid $secondary-color;
+    margin-right: 10px;
+  }
+
+  /* När radioknappen är markerad */
+.custom-radio input[type="radio"]:checked + .checkmark {
+    background-color: $secondary-color;
+  }
+
+  /* Skapa kryss i rutan när den är vald */
+.custom-radio input[type="radio"]:checked + .checkmark:after {
+    content: "X";
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    top: -2px;
+    left: 3px;
+  }
+
+  .submit-btn{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid $secondary-color;
+    border-radius: 5px;
+    color: $secondary-color;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .submit-btn:hover{
+    background-color: #c9c9c9;
+  }
+
+
+
+
+

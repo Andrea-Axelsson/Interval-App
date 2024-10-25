@@ -1,0 +1,21 @@
+.menu{
+    position: absolute;
+    width: 100%;
+    background-color: #acacac;
+    padding: 20px 0;
+    z-index: 1;
+}
+
+.menu-text{
+    color: $secondary-color;
+    font-weight: 700;
+    font-size: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.menu-text label{
+    cursor: pointer;
+}

@@ -1,0 +1,65 @@
+.container{
+    background: $primary-color;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.timer__analog {
+  position: relative;
+  width: 200px; /* Storlek på klockan */
+  height: 200px;
+  border-radius: 50%; /* Gör cirkeln rund */
+  background: #f0f0f0;
+  margin: 20px auto; /* Centrerar klockan */
+}
+
+.timer__analog-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.tick {
+  position: absolute;
+  width: 2px; /* Bredd på varje tick */
+  height: 10px; /* Längd på varje tick */
+  background: black;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center; /* Rotationspunkt från tickens botten */
+}
+
+.second-hand {
+  position: absolute;
+  width: 2px;
+  height: 140px; /* Sekundvisarens längd */
+  background: black; /* Färg på sekundvisaren */
+  top: -30px; /* Startposition nära mitten */
+  left: 50%;
+  transform-origin: bottom center;
+  transition: transform 0.3s ease-in-out; /* Mjuk övergång för visaren */
+}
+
+.minute-hand {
+  position: absolute;
+  width: 4px; /* Minutvisaren är bredare */
+  height: 110px; /* Minutvisaren är kortare än sekundvisaren */
+  background: blue; /* Färg på minutvisaren */
+  top: 0;
+  left: 50%;
+  transform-origin: bottom center;
+  transition: transform 0.3s ease-in-out; /* Mjuk övergång för visaren */
+}
+
+  .text-timer{
+    width: 300px;
+    text-align: center;
+ 
+  }
+
